@@ -20,6 +20,24 @@ In the 'Engine_and_PixelPop\PixelPop' directory is a binary file 'PixelPop.exe' 
 This is a very old project (2015) from my bachelor time and sadly I couldn't get it to build again since I didn't document the versions of the used dependencies at that time. Luckily I kept the binary that I had build at that time :)
 
 
+## Design
+<table>
+  <tr>
+    <td><strong>Classes defining the low-level interface for rendering</strong></td>
+    <td><strong>Utility classes for rendering that use the low-level interface themselves</strong></td>
+  </tr>
+  <tr>
+    <td><img src="https://user-images.githubusercontent.com/16277721/154995749-8a6f4204-3567-40bd-ab1e-5a77a63926b7.png"></td>
+    <td><img src="https://user-images.githubusercontent.com/16277721/154996276-84ddcbc5-a396-4c18-8588-a29419db6b51.png"></td>
+  </tr>
+</table>
+
+<strong>Whole class diagram</strong>
+- Left of the red bar: Rendering interface static library defining the interface and utility classes on top for rendering sprites, fonts, ...
+- Right of the red bar: DirectX9 implementation of the interfaces in it's own dynamic library 
+![whole](https://user-images.githubusercontent.com/16277721/154996572-4cb2aecd-f7a0-4fc0-bca5-81ca42c6cc01.png)
+
+
 ## References
 This whole project is mainly about abstracting away details from the user making a system flexible and simple. One of the advantages is allowing the user to not having to think about managing resources (e.g. images, vertex buffers, ..., reloading on context switches, ...) at all and being able to focus fully on what is important (in this case game design).
 
