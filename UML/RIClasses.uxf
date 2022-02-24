@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1240</x>
+      <y>536</y>
+      <w>320</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>*/IRenderSystem/*
+--
+CreateRenderSystem(string API) : bool
+ReleaseRenderSystem()
+--
+VOnInit()
+VOnResize()
+VOnRelease()
+--
+VSetClearColor()
+VClear()
+VBeginRendering()
+VDrawPic(Vec4 &amp;points[4], HTexture img, ...)
+VEndRendering()
+VSetCameraPosition(Vec2 position)
+VSetCameraSize(U32 width, U32 height, viewport, flipYaxis)
+--
+IsRunning()
+VSetWindowed(bool)
+GetTextureManager()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1232</x>
+      <y>520</y>
+      <w>336</w>
+      <h>384</h>
+    </coordinates>
+    <panel_attributes>bt=.
+*Interfaces*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1240</x>
+      <y>768</y>
+      <w>576</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>bt=.
+*Resources*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1608</x>
+      <y>112</y>
+      <w>16</w>
+      <h>1120</h>
+    </coordinates>
+    <panel_attributes>bt=*
+ActiveClass
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1352</x>
+      <y>968</y>
+      <w>192</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>*HandleMgr&lt;DATA, HANDLE&gt;*
+--
+Create(Handle &amp;h) : *DATA
+Release(Handle h) : void
+
+Get(Handle h) : *DATA
+Get(Handle h) const : const *DATA
+--
+GetNumHandles()
+HasUsedHandles()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1256</x>
+      <y>968</y>
+      <w>88</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>*Handle&lt;T&gt;*
+--
+GetHandle()
+GetIndex()
+GetValidation()
+IsNull()
+operator() UINT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1248</x>
+      <y>784</y>
+      <w>312</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>/*ITextureManager*/
+--
+VGetTexture(std::string name) : HTexture
+VReleaseTexture(HTexture handle)
+--
+GetWidth(HTexture handle)
+GetHeight(HTexture handle)
+GetColorKey(HTexture handle)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1248</x>
+      <y>952</y>
+      <w>304</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>bt=.
+*Generic HandleMgr*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1640</x>
+      <y>816</y>
+      <w>168</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>D9TextureManager
+--
+Impl
+--
+OnLostDevice()
+OnRestoreDevice()
+--
+/private helper
+Create(handle &amp;h, char* name)
+Release(handle)
+Get(handle)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1664</x>
+      <y>960</y>
+      <w>112</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>D9Texture
+--
+OnRestore()
+OnRelease()
+--
+GetWidth()
+GetHeight()
+GetData()
+GetColorKey()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1248</x>
+      <y>912</y>
+      <w>312</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>*HTexture*
+--
+typedef Handle&lt;tag_s&gt; HTexture</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1376</x>
+      <y>736</y>
+      <w>40</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1
+</panel_attributes>
+    <additional_attributes>24;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1536</x>
+      <y>800</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;104;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1696</x>
+      <y>904</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=0..*</panel_attributes>
+    <additional_attributes>24;24;24;56</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1664</x>
+      <y>608</y>
+      <w>152</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>D9RenderInterface
+--
+Impl
+--
+LoadOptions()
+CreateD3DDevice()
+--
+OnRestore()
+OnLostDevice()
+...</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1536</x>
+      <y>624</y>
+      <w>144</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;128;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1928</x>
+      <y>568</y>
+      <w>168</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>2DRenderer
+--
+OnLostDevice()
+OnRestore()
+--
+BeginFrame()
+Alloc()
+EndFrame()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1912</x>
+      <y>440</y>
+      <w>88</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>guiVert_t
+--
+float x,y,z, rhw
+DWORD color
+float tu, tv</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2016</x>
+      <y>424</y>
+      <w>104</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>guiSurface_t
+--
+HTexture tex
+bool bAlpha
+enum Stencil
+U32 numV
+U32 numI
+U32 startI</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1792</x>
+      <y>608</y>
+      <w>152</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;136;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2040</x>
+      <y>496</y>
+      <w>40</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;72;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1880</x>
+      <y>720</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>ID3DVertexBuffer9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>2000</x>
+      <y>720</y>
+      <w>120</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>ID3DIndexBuffer9</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1920</x>
+      <y>632</y>
+      <w>72</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=1
+
+</panel_attributes>
+    <additional_attributes>56;24;24;88</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>2016</x>
+      <y>632</y>
+      <w>56</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m2=1
+
+</panel_attributes>
+    <additional_attributes>40;24;24;88</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1248</x>
+      <y>368</y>
+      <w>296</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Camera
+--
+RICamera(RenderInterface *pRI, Vec2 &amp;pos, Vec2&amp; size)
+--
+SetCenter(Vec2 &amp;pos)
+AddToCenter(Vec2 &amp;pos)
+SetSize(Vec2 &amp;size)
+SetViewport(FloatRect &amp;rect)
+--
+GetProjection() // Requires RenderInterface
+GetInverseProjection()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1368</x>
+      <y>320</y>
+      <w>40</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1048</x>
+      <y>1136</y>
+      <w>96</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>*RISprite*
+--
+With animation
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1192</x>
+      <y>784</y>
+      <w>72</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>56;104;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>656</x>
+      <y>856</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>RIMatrix</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>752</x>
+      <y>856</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>RIVec2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>656</x>
+      <y>888</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>RIVec4
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>656</x>
+      <y>752</y>
+      <w>176</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Color
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>752</x>
+      <y>888</y>
+      <w>80</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>RIRandom</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>688</x>
+      <y>960</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>RITransformable</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1264</x>
+      <y>272</y>
+      <w>256</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Describes the part of the world that is
+displayed on the viewport of the Screen.
+-
+returns the viewprojection and 
+ the viewport of the camera
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1680</x>
+      <y>392</y>
+      <w>112</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>D9Camera
+--
+GetProjection()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1520</x>
+      <y>384</y>
+      <w>176</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;160;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>712</x>
+      <y>968</y>
+      <w>400</w>
+      <h>184</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;56;312;56;384;168</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>952</x>
+      <y>728</y>
+      <w>264</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>ServiceLocator
+--
+ProvideRenderSystem(IRenderSystem *pSys) 
+RenderSystem() : &amp;IRenderSystem
+--
+ProvideTextureManager(TextureManager *pMgr)
+TexMgr() : &amp;ITextureManager</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1640</x>
+      <y>184</y>
+      <w>208</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>bg=blue
+*DirectX9 Implementation DLL*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>656</x>
+      <y>800</y>
+      <w>176</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>Rect&lt;type&gt;
+--
+IntRect
+FloatRect</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1152</x>
+      <y>536</y>
+      <w>104</w>
+      <h>208</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>88;24;64;24;64;152;24;192</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>984</x>
+      <y>560</y>
+      <w>184</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>DynLibrary
+--
+Helper for loading dynamic
+libraries</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1472</x>
+      <y>464</y>
+      <w>40</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;72</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>648</x>
+      <y>728</y>
+      <w>192</w>
+      <h>272</h>
+    </coordinates>
+    <panel_attributes>bt=.
+*Low-Level*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>1496</x>
+      <y>184</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>bg=blue
+*RI LIBRARY*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>688</x>
+      <y>920</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Font</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>896</x>
+      <y>1080</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>/Drawable/
+Interface</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>784</x>
+      <y>1056</y>
+      <w>368</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>bt=.
+*Drawable*</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>928</x>
+      <y>1088</y>
+      <w>40</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>984</y>
+      <w>320</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;370.0;50.0;380.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>728</x>
+      <y>984</y>
+      <w>152</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0;170.0;50.0;170.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>872</x>
+      <y>1088</y>
+      <w>48</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>32;24;24;48</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>992</x>
+      <y>1088</y>
+      <w>88</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>24;24;72;48</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1136</x>
+      <y>920</y>
+      <w>128</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>140.0;10.0;10.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>792</x>
+      <y>1136</y>
+      <w>120</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Label</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>920</x>
+      <y>1136</y>
+      <w>120</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>RectangleShape</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Note</type>
+    <coordinates>
+      <x>880</x>
+      <y>944</y>
+      <w>176</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>bg=blue
+*Utility classes*
+*for game programming*</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
