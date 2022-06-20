@@ -1,9 +1,9 @@
 # RenderEngine_2D
 
 This repo contains a 2D render engine that is API independent and abstracts away the low level rendering details from the user. The following projects are contained in this repo:
-- RI: The abstract low level render interface (mainly [IRenderSystem](Engine_and_PixelPop/Include/IRenderSystem.h) (Renderer interface + texture manager) and the [TextureHandle](Engine_and_PixelPop/Include/HandleMgr.h) class) and user friendly utility classes for rendering (e.g. a [Sprite](Engine_and_PixelPop/Include/Drawable/Sprite.h) class and text rendering class [Label](Engine_and_PixelPop/Include/Drawable/Label.h)). These utility classes use the main render interface themselves under the hood.
-- RSD9: Dynamic library implementing the above interface using DirectX9 (mainly [D9RenderSystem](Engine_and_PixelPop/RI/RID9/D9RenderSystem.h) for the main interface and [D92DRenderer](Engine_and_PixelPop/RI/RID9/D92DRenderer.h) for low level rendering and managing vertex-/ and index-buffers.
-- Pixelpop: A simple demo game to test the functionality of the render engine (Implementing the flashgame pixelpop from nitrome myself http://www.nitrome.com/games/pixelpop/) 
+- RI: The <b>abstract low level render interface</b> (mainly [IRenderSystem](Engine_and_PixelPop/Include/IRenderSystem.h) (Renderer interface + texture manager) and the [TextureHandle](Engine_and_PixelPop/Include/HandleMgr.h) class) and user friendly utility classes for rendering (e.g. a [Sprite](Engine_and_PixelPop/Include/Drawable/Sprite.h) class and text rendering class [Label](Engine_and_PixelPop/Include/Drawable/Label.h)). These utility classes use the main render interface themselves under the hood.
+- RSD9: Dynamic library <b>implementing the above interface using DirectX9</b> (mainly [D9RenderSystem](Engine_and_PixelPop/RI/RID9/D9RenderSystem.h) for the main interface and [D92DRenderer](Engine_and_PixelPop/RI/RID9/D92DRenderer.h) for low level rendering and managing vertex-/ and index-buffers.
+- Pixelpop: A simple <b>demo game</b> to test the functionality of the render engine (Implementing the flashgame pixelpop from nitrome myself http://www.nitrome.com/games/pixelpop/) 
 
 
 A video of the demo game using the engine with the DirectX9 implementation.
