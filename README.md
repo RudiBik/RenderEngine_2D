@@ -5,12 +5,6 @@ This repo contains a 2D render engine that is API independent and abstracts away
 - RSD9: Dynamic library <b>implementing the above interface using DirectX9</b> (mainly [D9RenderSystem](Engine_and_PixelPop/RI/RID9/D9RenderSystem.h) for the main interface and [D92DRenderer](Engine_and_PixelPop/RI/RID9/D92DRenderer.h) for low level rendering and managing vertex-/ and index-buffers.
 - Pixelpop: A simple <b>demo game</b> to test the functionality of the render engine (Implementing the flashgame pixelpop from nitrome myself http://www.nitrome.com/games/pixelpop/) 
 
-
-A video of the demo game using the engine with the DirectX9 implementation.
-
-https://user-images.githubusercontent.com/16277721/154807967-a27a0de0-198a-455f-846a-034d8974c0f4.mov
-
-
 The RI project is fully independent of any rendering API containing it's own classes for rendering configurations, vertices, rendering primitives, managing loaded images through handles, a texture manager and other details. This enables the implementation of the interface using different API's like DirectX or OpenGL and making it possible to decide at runtime which API to use for rendering (e.g. OpenGL on linux and DirectX on windows). In this repo only one implementation is provided using DirectX9.
 
 
